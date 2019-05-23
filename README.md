@@ -12,8 +12,4 @@ On clicking the photos image details are shown
 
 When we click on option add album , a form is dispalyed , fill the form and submit. It gets pushed to the database.
 
-To insert an image use index.php 
 
-Now go to link insert image
-
-A form is displayed , fill the details and submit.It gets pushed to database.
