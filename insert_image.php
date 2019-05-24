@@ -14,6 +14,7 @@ $db = mysqli_connect("localhost" , "root" ,"" , "db_images") ;
 <body>
 
 
+
 <form method = "post" action = "insert_image.php" enctype = "multipart/form-data">
 	
 	<table width = "100" height = "100" align = "center" border = "2" bgcolor = "#19BFD1">
@@ -38,7 +39,10 @@ $db = mysqli_connect("localhost" , "root" ,"" , "db_images") ;
      <td align = "right" <b>Albun_name</b> </td> 
 	 <td> <input type = "text" name = "alb_name"  /> </td>
      </tr>
-	
+	 
+     <tr>
+     <td> <input type = "hidden" name = "albm_id" value = <?php if(isset($_GET['insert'])){ echo $_GET['insert'] ; }  ?> /> </td>
+     </tr>	 
      <tr align = "center" >
 	 <td colspan = "2"> <input type = "submit" name = "insert_image" value = "insert image"/></td>
 	 </tr>
@@ -46,14 +50,14 @@ $db = mysqli_connect("localhost" , "root" ,"" , "db_images") ;
 <?php
   
   if(isset($_POST['insert_image'])){
-    
+    global $alb_id ; 
 	$image_name = $_FILES['img']['name'] ;
     $temp_name = $_FILES['img']['tmp_name'] ; 
     $img_desc = $_POST['img_desc'] ;  
-	$alb_name = $_POST['alb_name'] ; 
+	$alb_name = $_POST['alb_name'] ;
+    $al_id	 = $_POST['albm_id'] ; 
     move_uploaded_file($temp_name , "images/$image_name") ;
-    
-    $query = "insert into image_info(image , Date , description , name) values('$image_name' , NOW() , '$img_desc', '$alb_name')" ; 
+    $query = "insert into image_info(image , Date , description , name , album_id) values('$image_name' , NOW() , '$img_desc', '$alb_name' , '$al_id')" ; 
      
     $run_query = mysqli_query($db , $query) ; 
      	

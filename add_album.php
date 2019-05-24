@@ -20,6 +20,15 @@ $db = mysqli_connect("localhost" , "root" ,"" , "albums") ;
 	 <td> <input type = "text" name = "albumName"  /> </td>
 	 </tr>	 
 	 
+	 <tr>
+     <td align = "right" <b>ALBUM_DESCRIPTION</b> </td> 
+	 <td> <input type = "text" name = "alb_desc"  /> </td>
+	 </tr>
+	 
+	 <tr>
+     <td> <input type = "hidden" name = "user_id" value = <?php if(isset($_GET['userid'])){ echo $_GET['userid'] ; }  ?> /> </td>
+     </tr>
+	 
      <tr align = "center" >
 	 <td colspan = "2"> <input type = "submit" name = "getAlbum" value = "submitAlbum"/></td>
 	 </tr>
@@ -29,8 +38,9 @@ $db = mysqli_connect("localhost" , "root" ,"" , "albums") ;
  if(isset($_POST['getAlbum'])){
     
 	$album_name = $_POST['albumName'] ; 
-	 
-	$query = "insert into album_name(name) values('$album_name')" ; 
+	$alb_desc = $_POST['alb_desc'] ;  
+	$userid = $_POST['user_id'] ; 
+	$query = "insert into album_name(name , description , date , user_id) values('$album_name' , '$alb_desc' , NOW() , '$userid')" ; 
     $run_query = mysqli_query($db , $query) ;  
  }
 
