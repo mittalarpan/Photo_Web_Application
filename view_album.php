@@ -1,6 +1,5 @@
 <?php
 $db = mysqli_connect("localhost" , "root" ,"" , "albums") ;
-
 ?>
 
 <html>
@@ -20,17 +19,8 @@ $db = mysqli_connect("localhost" , "root" ,"" , "albums") ;
  
  while($row_ans = mysqli_fetch_array($run_query)){
     $albm_name = $row_ans['name'] ;  
-	$albm_id  = $row_ans['album_id'] ; 
-	echo "<a href='album_photos.php?id=$albm_id'>$albm_name</a><br>" ; 
+    $albm_id  = $row_ans['album_id'] ; 
+    echo "<a href='album_photos.php?id=$albm_id'>$albm_name</a><br>" ; 
  
- }	 
+ }     
 ?>
-
-
-
-
-
-
-</body>
-
-</html>
