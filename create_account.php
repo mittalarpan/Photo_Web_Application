@@ -23,7 +23,7 @@ $db3 = mysqli_connect("localhost" , "root" ,"" , "user_info") ;
 
      <tr>
      <td align = "right" <b>PASSWORD</b> </td> 
-     <td> <input type = "text" name = "password"  /> </td>
+     <td> <input type = "password" name = "password"  /> </td>
      </tr>
      
      <tr>

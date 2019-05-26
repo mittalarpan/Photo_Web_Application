@@ -5,7 +5,8 @@ $db2 = mysqli_connect("localhost" , "root" ,"" , "albums") ;
 
 <html>
 <head>
-<title>album</title> 
+<title>album</title>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' crossorigin='anonymous'> 
 </head> 
 <body>
 
@@ -53,7 +54,7 @@ $db2 = mysqli_connect("localhost" , "root" ,"" , "albums") ;
         $name = $row_images['image'] ; 
         echo
        "
-       <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' crossorigin='anonymous'>
+       
        <div style = 'flex: 0 0 33.33%;'>
        <div class='card' style='width: 18rem;'>
        <img class='card-img-top' src='images/$name' alt='Album photo'>
