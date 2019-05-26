@@ -70,8 +70,9 @@ if(isset($_POST['login'])){
             <div class='list-group'>
             <a href='user_details.php?userid=$send' class='list-group-item list-group-item-action'><b>USER PROFILE</b></a> 
             <a href='album.php?userid=$send'class='list-group-item list-group-item-action'><b>CLICK FOR HOMEPAGE</b> </a><br>
-            <a href='logout.php' class='list-group-item list-group-item-action'><b>LOGOUT </b></a>
-
+            <a href='delete_user.php?userid=$send'class='list-group-item list-group-item-action'><b>DELETE ACCOUNT</b> </a><br>
+			<a href='logout.php' class='list-group-item list-group-item-action'><b>LOGOUT </b></a>
+              
             </div>
 
             ";
