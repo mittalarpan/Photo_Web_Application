@@ -6,7 +6,7 @@ USE CASES:
 
 A login page to create , login , update , view , delete an account.
 
-We can add new albums and view or delete the existing ones.
+We can add new albums and update , view or delete the existing ones.
 
 We can see the description of an album or image.
 
