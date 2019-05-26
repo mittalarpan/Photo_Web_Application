@@ -40,6 +40,7 @@ $db2 = mysqli_connect("localhost" , "root" ,"" , "albums") ;
   <div class='list-group'>
 
   <a href='insert_image.php?insert=$alb_id' class='list-group-item list-group-item-action'><b>INSERT_IMAGE</b> </a><br>
+  <a href='update_album.php?update=$alb_id' class='list-group-item list-group-item-action'><b>UPDATE_ALBUM </b></a>
   <a href='delete_album.php?delete=$alb_id' class='list-group-item list-group-item-action'><b>DELETE_ALBUM </b></a>
 
   </div>

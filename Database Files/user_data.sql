@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2019 at 02:47 PM
+-- Generation Time: May 26, 2019 at 04:39 PM
 -- Server version: 10.1.40-MariaDB
 -- PHP Version: 7.1.29
 
@@ -45,7 +45,7 @@ CREATE TABLE `user_data` (
 INSERT INTO `user_data` (`user_id`, `user_name`, `password`, `first_name`, `last_name`, `gender`, `profile_picture`) VALUES
 (6, 'test', '1234', 'Tom', 'Smith', 'Male', NULL),
 (7, 'test2', 'abc', 'Steve', 'Richardson', 'Male', NULL),
-(8, 'test3', 'a@123', 'ABC', 'XYZ', 'F', NULL);
+(8, 'test3', 'b@123', 'A', 'B', 'M', NULL);
 
 --
 -- Indexes for dumped tables

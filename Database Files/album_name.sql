@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2019 at 02:43 PM
+-- Generation Time: May 26, 2019 at 04:40 PM
 -- Server version: 10.1.40-MariaDB
 -- PHP Version: 7.1.29
 
@@ -41,7 +41,7 @@ CREATE TABLE `album_name` (
 --
 
 INSERT INTO `album_name` (`name`, `description`, `date`, `album_id`, `user_id`) VALUES
-('IRON MAN', 'SUPERHERO FROM MARVEL CINEMATIC UNIVERSE', '2019-05-26 11:21:28', 47, 6),
+('IRON MAN', 'SUPERHERO', '2019-05-26 14:28:09', 47, 6),
 ('LANDSCAPE', 'BEAUTIFUL NATURE', '2019-05-26 11:29:40', 48, 6),
 ('SPORTS', 'SPORTS IMAGES ', '2019-05-26 11:35:18', 49, 7),
 ('CODING', 'CODING RELATED STUFF', '2019-05-26 11:36:49', 50, 7),
@@ -65,7 +65,7 @@ ALTER TABLE `album_name`
 -- AUTO_INCREMENT for table `album_name`
 --
 ALTER TABLE `album_name`
-  MODIFY `album_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `album_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

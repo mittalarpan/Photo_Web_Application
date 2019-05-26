@@ -36,10 +36,7 @@ $db = mysqli_connect("localhost" , "root" ,"" , "db_images") ;
      </tr>
 
 
-     <tr>
-     <td align = "right" <b>Albun_name</b> </td> 
-     <td> <input type = "text" name = "alb_name"  /> </td>
-     </tr>
+     
      
      <tr>
      <td> <input type = "hidden" name = "albm_id" value = <?php if(isset($_GET['insert'])){ echo $_GET['insert'] ; }  ?> /> </td>
@@ -55,10 +52,10 @@ $db = mysqli_connect("localhost" , "root" ,"" , "db_images") ;
     $image_name = $_FILES['img']['name'] ;
     $temp_name = $_FILES['img']['tmp_name'] ; 
     $img_desc = $_POST['img_desc'] ;  
-    $alb_name = $_POST['alb_name'] ;
+   // $alb_name = $_POST['alb_name'] ;
     $al_id     = $_POST['albm_id'] ; 
     move_uploaded_file($temp_name , "images/$image_name") ;
-    $query = "insert into image_info(image , Date , description , name , album_id) values('$image_name' , NOW() , '$img_desc', '$alb_name' , '$al_id')" ; 
+    $query = "insert into image_info(image , Date , description  , album_id) values('$image_name' , NOW() , '$img_desc' , '$al_id')" ; 
      
     $run_query = mysqli_query($db , $query) ; 
     header("Refresh: 2;URL=album_photos.php?id=$al_id") ;     

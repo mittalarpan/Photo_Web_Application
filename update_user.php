@@ -42,25 +42,25 @@ $db3 = mysqli_connect("localhost" , "root" ,"" , "user_info") ;
 if(isset($_POST['change'])){
 $user_id = $_POST['user_id'] ; 
 
-if(isset($_POST['firstName'])){
+if(isset($_POST['firstName']) AND !empty($_POST['firstName'])){
   $first_name = $_POST['firstName'] ;
   $query = "UPDATE user_data SET first_name = '$first_name' where user_id='$user_id'" ; 
   $run_query = mysqli_query($db3 , $query) ; 
   header("Refresh: 2;URL=user.php?") ;
 }
-if(isset($_POST['lastName'])){
+if(isset($_POST['lastName']) AND !empty($_POST['lastName'])){
   $last_name = $_POST['lastName'] ;
   $query = "UPDATE user_data SET last_name = '$last_name' where user_id='$user_id'" ; 
   $run_query = mysqli_query($db3 , $query) ; 
   header("Refresh: 2;URL=user.php?") ;
 }
-if(isset($_POST['password'])){
+if(isset($_POST['password']) AND !empty($_POST['password'])){
   $password = $_POST['password'] ;
   $query = "UPDATE user_data SET password = '$password' where user_id='$user_id'" ; 
   $run_query = mysqli_query($db3 , $query) ; 
   header("Refresh: 2;URL=user.php?") ;
 }
-if(isset($_POST['gender'])){
+if(isset($_POST['gender']) AND !empty($_POST['gender'])){
   $gender = $_POST['gender'] ;
   $query = "UPDATE user_data SET gender = '$gender' where user_id='$user_id'" ; 
   $run_query = mysqli_query($db3 , $query) ; 
