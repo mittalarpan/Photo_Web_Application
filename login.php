@@ -16,6 +16,7 @@ $db3 = mysqli_connect("localhost" , "root" ,"" , "user_info") ;
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <form method = "post" action = "login.php" enctype = "multipart/form-data">
+<<<<<<< HEAD
   <div class="form-group">
     <label for="userName">User Name</label>
     <input type="text" name="userName" class="form-control" id="userName" placeholder="Enter username">
@@ -27,6 +28,23 @@ $db3 = mysqli_connect("localhost" , "root" ,"" , "user_info") ;
   <button type="submit" name="login" class="btn btn-primary">Submit</button>
   </form>
 
+=======
+     <table width = "100" height = "100" align = "center" border = "2" bgcolor = "#19BFD1">
+     
+     <tr>
+     <td align = "right" <b>USER_NAME</b> </td> 
+     <td> <input type = "text" name = "userName"  /> </td>
+     </tr>     
+
+     <tr>
+     <td align = "right" <b>PASSWORD</b> </td> 
+     <td> <input type = "text" name = "password"  /> </td>
+     </tr>
+     
+     <tr align = "center" >
+     <td colspan = "2"> <input type = "submit" name = "login" value = "login"/></td>
+     </tr>
+>>>>>>> 6bca8888ab4dcc99b45528cc113a5508ed495d59
 
 </body>
 
@@ -63,6 +81,7 @@ if(isset($_POST['login'])){
             $_SESSION['valid']=true ; 
             $_SESSION['timeout'] = time() ; 
             $_SESSION['username'] = $get ; 
+<<<<<<< HEAD
             echo "<div class='alert alert-success' role='alert'>
             SUCCESSFUL LOGIN 
            </div>" ; 
@@ -87,8 +106,23 @@ if(isset($_POST['login'])){
         echo "<div class='alert alert-danger' role='alert'>
            WRONG USERNAME OR PASSWORD!
            </div>"  ;
+=======
+            echo "SUCCESSFUL LOGIN <br>" ; 
+            echo "<a href = 'album.php?userid=$send'>CLICK FOR HOMEPAGE <br></a>" ;
+            echo "<a href = 'logout.php'>LOGOUT</a>" ;             
+         }
+         else{
+           echo "WRONG USERNAME OR PASSWORD" ;
+         }
+      }
+      else{
+        echo "WRONG USERNAME OR PASSWORD" ;
+>>>>>>> 6bca8888ab4dcc99b45528cc113a5508ed495d59
       }
     }
 }
 ?>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6bca8888ab4dcc99b45528cc113a5508ed495d59

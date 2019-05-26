@@ -26,6 +26,7 @@ $db = mysqli_connect("localhost" , "root" ,"" , "albums") ;
  while($row_ans = mysqli_fetch_array($run_query)){
     $albm_name = $row_ans['name'] ;  
     $albm_id  = $row_ans['album_id'] ; 
+<<<<<<< HEAD
    
     echo
 "<div class='list-group'>
@@ -39,3 +40,9 @@ $db = mysqli_connect("localhost" , "root" ,"" , "albums") ;
  }     
 ?>
 
+=======
+    echo "<a href='album_photos.php?id=$albm_id'>$albm_name</a><br>" ; 
+ 
+ }     
+?>
+>>>>>>> 6bca8888ab4dcc99b45528cc113a5508ed495d59

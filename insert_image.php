@@ -61,7 +61,11 @@ $db = mysqli_connect("localhost" , "root" ,"" , "db_images") ;
     $query = "insert into image_info(image , Date , description , name , album_id) values('$image_name' , NOW() , '$img_desc', '$alb_name' , '$al_id')" ; 
      
     $run_query = mysqli_query($db , $query) ; 
+<<<<<<< HEAD
     header("Refresh: 2;URL=album_photos.php?id=$al_id") ;     
+=======
+         
+>>>>>>> 6bca8888ab4dcc99b45528cc113a5508ed495d59
    }
   
 ?>
