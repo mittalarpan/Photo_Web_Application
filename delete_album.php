@@ -8,6 +8,8 @@ $db2 = mysqli_connect("localhost" , "root" ,"" , "db_images") ;
 <html>
 
 <body>
+<p align="right"><a href = 'logout.php'>LOGOUT</a></p> 
+
 
 <?php
   

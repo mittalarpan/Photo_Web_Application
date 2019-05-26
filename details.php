@@ -8,6 +8,8 @@ $db = mysqli_connect("localhost" , "root" ,"" , "db_images") ;
 </head>
 
 <body>
+<p align="right"><a href = 'logout.php'>LOGOUT</a></p> 
+
 
 <?php
  if(isset($_GET['detail'])){
